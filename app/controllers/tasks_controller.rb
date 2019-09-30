@@ -6,11 +6,13 @@ class TasksController < ApplicationController
   # GET /tasks.json
   def index
     @tasks = Task.all
+    @todos = Todo.all
   end
 
   # GET /tasks/1
   # GET /tasks/1.json
   def show
+    @all_users = @task.users
   end
 
   # GET /tasks/new

@@ -7,7 +7,7 @@ class User < ApplicationRecord
   has_many :todos
   has_many :tasks, through: :todos
 
-
+private
   def cargar
     Task.all.each do |task|
       Todo.create(
@@ -16,6 +16,5 @@ class User < ApplicationRecord
       )
     end
   end
-
-
+  
 end

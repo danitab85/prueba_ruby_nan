@@ -1,14 +1,15 @@
 <p id="notice"><%= notice %></p>
 
 <p>
+  <strong>Photo:</strong>
+  <%= @task.photo %>
+</p>
+
+<p>
   <strong>Name:</strong>
   <%= @task.name %>
 </p>
 
-<p>
-  <strong>Photo:</strong>
-  <%= @task.photo %>
-</p>
 
 <strong> Ha sido completada por: </strong>
 <br>
@@ -17,5 +18,6 @@
 
   <br>
 <%end%>
+<br>
 <%= link_to 'Edit', edit_task_path(@task) %> |
 <%= link_to 'Back', tasks_path %>
